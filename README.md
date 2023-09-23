@@ -39,7 +39,8 @@ conda install ffmpeg
 pip install -r requirements.txt
 
 ### Coqui TTS is optional for gradio demo. 
-### pip install TTS
+### pip install TTS (text to speech)
+pip install TTS
 
 ```
 
@@ -49,12 +50,9 @@ bash scripts/download_models.sh
 ```
 
 3. start
-## you need manually install TTS(https://github.com/coqui-ai/TTS) via `pip install tts` in advanced.
+you need manually install TTS(https://github.com/coqui-ai/TTS) via `pip install tts` in advanced.
 ```
 python app_sadtalker.py
-```
-```
-bash webui.sh
 ```
 
 # Stable Diffusion web UI
@@ -69,10 +67,10 @@ export SADTALKER_CHECKPOINTS=/path/to/SadTalker/checkpoints
 ```
 
 Start the WebUI via ```webui.sh or webui_user.sh```
+default method is ```bash webui.sh```
 
 
-
-#ERRORS
+# ERRORS
 
 if you are running on CPU, you need to specific
 ```
