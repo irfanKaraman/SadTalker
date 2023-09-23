@@ -1,6 +1,10 @@
 # SadTalker
 
 1.Install Anaconda, Python and git.
+```
+cd SadTalker 
+git init .
+```
 - Anaconda
 ```
 sudo apt-get update
@@ -9,10 +13,14 @@ apt-get install wget
 wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
 sha256sum Anaconda3-2022.05-Linux-x86_64.sh
 bash Anaconda3-2022.05-Linux-x86_64.sh
+```
 # check
+```
 conda info
 conda --version
+```
 # update conda
+```
 conda update conda
 conda update anaconda
 ```
@@ -22,7 +30,6 @@ Python
 sudo apt-get update
 sudo apt install python
 ```
-
 ```
 git clone https://github.com/OpenTalker/SadTalker.git
 
@@ -35,6 +42,7 @@ conda activate sadtalker
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 
 conda install ffmpeg
+sudo apt install ffmpeg
 
 pip install -r requirements.txt
 
@@ -111,3 +119,6 @@ sudo swapon --show
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
+```
+sudo apt update
+```
