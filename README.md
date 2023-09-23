@@ -1,8 +1,8 @@
 # SadTalker
 
 1.Install Anaconda, Python and git.
-Anaconda
-<--
+- Anaconda
+```
 sudo apt-get update
 cd /tmp
 apt-get install wget
@@ -15,15 +15,15 @@ conda --version
 # update conda
 conda update conda
 conda update anaconda
--->
+```
 
 Python
-<-- 
+```
 sudo apt-get update
 sudo apt install python
--->
+```
 
-
+```
 git clone https://github.com/OpenTalker/SadTalker.git
 
 cd SadTalker 
@@ -41,18 +41,48 @@ pip install -r requirements.txt
 ### Coqui TTS is optional for gradio demo. 
 ### pip install TTS
 
+```
+
 2. download models
-   bash scripts/download_models.sh
+```
+bash scripts/download_models.sh
+```
 
 3. start
- ## you need manually install TTS(https://github.com/coqui-ai/TTS) via `pip install tts` in advanced.
+## you need manually install TTS(https://github.com/coqui-ai/TTS) via `pip install tts` in advanced.
+```
 python app_sadtalker.py
-
+```
+```
 bash webui.sh
+```
 
-4. memory SWAP set script
-   # disable the use of swap
-<--
+# Stable Diffusion web UI
+```
+sudo apt install wget git python3 python3-venv libgl1 libglib2.0-0
+```
+cd SOMEWHERE_YOU_LIKE
+```
+bash <(wget -qO- https://raw.githubusercontent.com/Winfredy/OpenTalker/main/scripts/download_models.sh)
+
+export SADTALKER_CHECKPOINTS=/path/to/SadTalker/checkpoints
+```
+
+Start the WebUI via ```webui.sh or webui_user.sh```
+
+
+
+#ERRORS
+
+if you are running on CPU, you need to specific
+```
+export COMMANDLINE_ARGS="--disable-safe-unpickle"
+```
+
+
+Memory SWAP set script
+- disable the use of swap
+```
 sudo swapoff -a
 
 # create the SWAP file. Make sure you have enough space on the hard disk.
@@ -81,5 +111,5 @@ sudo swapon --show
 
 # Once everything is set, you must set the SWAP file as permanent, else you will lose the SWAP after reboot. Run this command:
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
--->
+```
 
