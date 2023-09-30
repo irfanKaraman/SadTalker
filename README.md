@@ -1,5 +1,10 @@
 # SadTalker
 
+for using docker download ubuntu:latest and run the container
+```
+docker run --name sadtalker_linux -t -i --rm ubuntu bash
+```
+
 1.Install Anaconda, Python and git.
 ```
 cd SadTalker 
