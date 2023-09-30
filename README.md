@@ -8,7 +8,6 @@ docker run --name sadtalker_linux -t -i --rm ubuntu bash
 1.Install Anaconda, Python and git.
 ```
 mkdir SadTalker
-cd SadTalker 
 ```
 - Anaconda
 ```
@@ -44,13 +43,13 @@ sudo apt install python3
 Git
 ```
 apt install git
-git init .
 ```
 
 ```
 git clone https://github.com/OpenTalker/SadTalker.git
 
 cd SadTalker 
+git init .
 
 conda create -n sadtalker python=3.8
 
