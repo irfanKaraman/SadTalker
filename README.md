@@ -20,12 +20,12 @@ wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
 sha256sum Anaconda3-2022.05-Linux-x86_64.sh
 bash Anaconda3-2022.05-Linux-x86_64.sh
 ```
-# check
+# check---
 ```
 conda info
 conda --version
 ```
-# update conda
+# update conda---
 ```
 conda update conda
 conda update anaconda
@@ -34,7 +34,7 @@ conda update anaconda
 Python
 ```
 sudo apt-get update
-sudo apt install python
+sudo apt install python3
 ```
 ```
 git clone https://github.com/OpenTalker/SadTalker.git
