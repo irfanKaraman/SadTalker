@@ -7,6 +7,7 @@ docker run --name sadtalker_linux -t -i --rm ubuntu bash
 
 1.Install Anaconda, Python and git.
 ```
+mkdir SadTalker
 cd SadTalker 
 git init .
 ```
