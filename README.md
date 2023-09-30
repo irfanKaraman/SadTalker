@@ -1,6 +1,6 @@
 # SadTalker
 
-for using docker download ubuntu:latest and run the container
+for using docker download ubuntu:latest and run the container. If you re not using docker skip the command below.
 ```
 docker run --name sadtalker_linux -t -i --rm ubuntu bash
 ```
@@ -61,9 +61,6 @@ pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --e
 conda install ffmpeg
 sudo apt install ffmpeg
 
-pip install -r requirements.txt
-
-### Coqui TTS is optional for gradio demo. 
 ### pip install TTS (text to speech)
 pip install TTS
 
