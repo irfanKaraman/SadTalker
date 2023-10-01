@@ -1,7 +1,7 @@
 # SadTalker
 ```
-mkdir SadTalker
-cd SadTalker
+mkdir AI
+cd AI
 ```
 1.Install Anaconda, Python and git.
 
