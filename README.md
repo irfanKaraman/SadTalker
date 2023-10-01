@@ -2,6 +2,9 @@
 
 1.Install Anaconda, Python and git.
 
+mkdir SadTalker
+cd SadTalker
+
 - Anaconda
 ```
 sudo apt-get update
@@ -44,8 +47,6 @@ sudo apt install git
 ```
 git clone https://github.com/OpenTalker/SadTalker.git
 
-cd SadTalker
-
 conda create -n sadtalker python=3.8
 
 conda activate sadtalker
@@ -56,7 +57,6 @@ pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --e
 ```
 ```
 conda install -y ffmpeg
-sudo apt install -y ffmpeg
 
 pip install -r requirements.txt
 
@@ -64,6 +64,8 @@ pip install --upgrade pip
 
 ### pip install TTS (text to speech)
 pip install TTS
+
+sudo apt install -y ffmpeg
 ```
 
 3. download models
