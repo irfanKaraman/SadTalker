@@ -9,7 +9,11 @@ cd SadTalker
 ```
 sudo apt-get update
 sudo apt-get install wget
+```
+```
 wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+```
+```
 bash Anaconda3-2022.05-Linux-x86_64.sh
 ```
 reload bash
