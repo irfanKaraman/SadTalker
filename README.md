@@ -16,19 +16,22 @@ reload bash
 
 # check---
 ```
-conda info
 conda --version
 ```
 # update conda---
 ```
-conda update conda
-conda update anaconda
+conda update conda -y
+conda update anaconda -y
 ```
 
 - Python (if its not installed already)
 ```
 sudo apt-get update
-sudo apt install python3
+
+sudo apt install -y python3
+
+sudo apt install python3-pip -y
+
 ```
 
 - Git (if its not installed already)
@@ -47,16 +50,17 @@ conda create -n sadtalker python=3.8
 
 conda activate sadtalker
 
-sudo apt install pip
 ```
 ```
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 ```
 ```
-conda install ffmpeg
-sudo apt install ffmpeg
+conda install -y ffmpeg
+sudo apt install -y ffmpeg
 
 pip install -r requirements.txt
+
+pip install --upgrade pip
 
 ### pip install TTS (text to speech)
 pip install TTS
