@@ -39,6 +39,14 @@ sudo apt install -y python3
 
 sudo apt install python3-pip -y
 
+sudo apt install pip
+
+python3 -m pip install --upgrade pip setuptools wheel
+
+pip3 install virtualenv
+
+python3 -m venv test_TTS_env
+
 ```
 
 - Git (if its not installed already)
@@ -51,6 +59,8 @@ sudo apt install git
 ```
 git clone https://github.com/OpenTalker/SadTalker.git
 
+cd SadTalker
+
 conda create -n sadtalker python=3.8
 
 conda activate sadtalker
@@ -62,9 +72,9 @@ pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --e
 ```
 conda install -y ffmpeg
 
-pip install -r requirements.txt
-
 pip install --upgrade pip
+
+pip install -r requirements.txt
 
 ### pip install TTS (text to speech)
 pip install TTS
@@ -88,8 +98,8 @@ bash webui.sh
 sudo apt install wget git python3 python3-venv libgl1 libglib2.0-0
 ```
 ```
-mkdir Text2Img
-cd Text2Img
+mkdir T2I
+cd T2I
 ```
 ```
 wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh
