@@ -1,9 +1,10 @@
 # SadTalker
 
-1.Install Anaconda, Python and git.
 
 mkdir SadTalker
 cd SadTalker
+
+1.Install Anaconda, Python and git.
 
 - Anaconda
 ```
