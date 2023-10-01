@@ -1,21 +1,12 @@
 # SadTalker
 
-for using docker download ubuntu:latest and run the container. If you re not using docker skip the command below.
-```
-docker run --name sadtalker_linux -t -i --rm ubuntu bash
-```
-
 1.Install Anaconda, Python and git.
-```
-mkdir SadTalker
-```
+
 - Anaconda
 ```
 sudo apt-get update
-cd /tmp
-apt-get install wget
+sudo apt-get install wget
 wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
-sha256sum Anaconda3-2022.05-Linux-x86_64.sh
 bash Anaconda3-2022.05-Linux-x86_64.sh
 ```
 reload bash
@@ -34,36 +25,40 @@ conda update conda
 conda update anaconda
 ```
 
-Python
+Python (if its not installed already)
 ```
 sudo apt-get update
 sudo apt install python3
 ```
 
-Git
+Git (if its not installed already)
 ```
-apt install git
+sudo apt install git
 ```
 
+SadTalker Installation
 ```
 git clone https://github.com/OpenTalker/SadTalker.git
 
-cd SadTalker 
-git init .
+```
+```
+cd SadTalker
 
+```
+```
 conda create -n sadtalker python=3.8
 
 conda activate sadtalker
 
-sudo apt install pip
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 
 conda install ffmpeg
 sudo apt install ffmpeg
 
+pip install -r requirements.txt
+
 ### pip install TTS (text to speech)
 pip install TTS
-
 ```
 
 2. download models
@@ -72,15 +67,96 @@ bash scripts/download_models.sh
 ```
 
 3. start
-you need manually install TTS(https://github.com/coqui-ai/TTS) via `pip install tts` in advanced.
 ```
-python app_sadtalker.py
+bash webui.sh
 ```
 
 # Stable Diffusion web UI
 ```
 sudo apt install wget git python3 python3-venv libgl1 libglib2.0-0
 ```
+```
+mkdir Text2Img
+cd Text2Img
+```
+
+```
+wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh
+```
+```
+webui.sh
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WSL setup for stable UI
+# install conda (if not already done)
+wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+chmod +x Anaconda3-2022.05-Linux-x86_64.sh
+./Anaconda3-2022.05-Linux-x86_64.sh
+
+# Clone webui repo
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+cd stable-diffusion-webui
+
+# Create and activate conda env
+conda env create -f environment-wsl2.yaml
+conda activate automatic
+
+
+
+
+
+for Docker Installation
+```
+docker run --gpus "all" --rm -v $(pwd):/host_dir wawa9000/sadtalker \
+--driven_audio /host_dir/deyu.wav \
+--source_image /host_dir/image.jpg \
+--expression_scale 1.0 \
+--still \
+--result_dir /host_dir
+```
+
+
+
+
 cd SOMEWHERE_YOU_LIKE
 ```
 bash <(wget -qO- https://raw.githubusercontent.com/Winfredy/OpenTalker/main/scripts/download_models.sh)
