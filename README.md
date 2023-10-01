@@ -1,6 +1,5 @@
 # SadTalker
 
-
 mkdir SadTalker
 cd SadTalker
 
