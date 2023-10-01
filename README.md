@@ -89,6 +89,7 @@ webui.sh
 ```
 
 
+```
 
 
 
@@ -127,6 +128,30 @@ webui.sh
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
 WSL setup for stable UI
 # install conda (if not already done)
 wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
