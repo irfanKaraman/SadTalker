@@ -25,18 +25,19 @@ conda update conda
 conda update anaconda
 ```
 
-Python (if its not installed already)
+- Python (if its not installed already)
 ```
 sudo apt-get update
 sudo apt install python3
 ```
 
-Git (if its not installed already)
+- Git (if its not installed already)
 ```
 sudo apt install git
 ```
 
-SadTalker Installation
+2. SadTalker Installation
+   
 ```
 git clone https://github.com/OpenTalker/SadTalker.git
 
@@ -61,17 +62,18 @@ pip install -r requirements.txt
 pip install TTS
 ```
 
-2. download models
+3. download models
 ```
 bash scripts/download_models.sh
 ```
 
-3. start
+4. Start SadTalker
 ```
 bash webui.sh
 ```
 
-# Stable Diffusion web UI
+
+# Text-to-Image WebUI
 ```
 sudo apt install wget git python3 python3-venv libgl1 libglib2.0-0
 ```
@@ -79,7 +81,6 @@ sudo apt install wget git python3 python3-venv libgl1 libglib2.0-0
 mkdir Text2Img
 cd Text2Img
 ```
-
 ```
 wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh
 ```
