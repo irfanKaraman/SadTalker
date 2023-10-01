@@ -41,9 +41,8 @@ sudo apt install git
 ```
 git clone https://github.com/OpenTalker/SadTalker.git
 
-```
 cd SadTalker
-```
+
 conda create -n sadtalker python=3.8
 
 conda activate sadtalker
