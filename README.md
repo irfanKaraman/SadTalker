@@ -51,6 +51,8 @@ conda create -n sadtalker python=3.8
 
 conda activate sadtalker
 
+sudo apt install pip
+pip install --upgrade pip
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 
 conda install ffmpeg
