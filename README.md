@@ -41,12 +41,6 @@ sudo apt install python3-pip -y
 
 sudo apt install pip
 
-python3 -m pip install --upgrade pip setuptools wheel
-
-pip3 install virtualenv
-
-python3 -m venv test_TTS_env
-
 ```
 
 - Git (if its not installed already)
@@ -62,6 +56,12 @@ git clone https://github.com/OpenTalker/SadTalker.git
 cd SadTalker
 
 conda create -n sadtalker python=3.8
+
+python3 -m pip install --upgrade pip setuptools wheel
+
+pip3 install virtualenv
+
+python3 -m venv test_TTS_env
 
 conda activate sadtalker
 
